@@ -44,8 +44,6 @@ SCENARIO("op=", "[assignment]")
 {
 	vector_t y(3);
 	vector_t z;
-	REQUIRE(z.size() == 0);
-	REQUIRE(z.capacity() == 3);
 	for (unsigned int i = 0; i < y.size(); i++)
 	{
 		REQUIRE(y[i] == z[i]);
