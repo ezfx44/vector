@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 class vector_t 
 {
@@ -6,7 +7,7 @@ private:
     unsigned int size_;
     unsigned int capacity_;
     int* ptr_;
-    auto swap(vector_t& other) -> void;
+    //auto swap(vector_t& other) -> void;
 public:
     vector_t() noexcept;
     vector_t(unsigned int size);
