@@ -39,13 +39,3 @@ SCENARIO("push_back", "[p_b]")
 		REQUIRE(x[i] <= 10);
 	}
 }
-
-SCENARIO("op=", "[assignment]")
-{
-	vector_t y(3);
-	vector_t z;
-	for (unsigned int i = 0; i < y.size(); i++)
-	{
-		REQUIRE(y[i] == z[i]);
-	}
-}
