@@ -8,12 +8,13 @@ SCENARIO("vector init", "[init]") {
 }
 
 SCENARIO("vector with param", "[init]") {
-	vector_t v(3);
-	REQUIRE(v.size() == 3);
-	REQUIRE(v.capacity() == 3);
-	for (unsigned int i = 0; i < v.size(); i++)
+	vector_t p(3);
+	REQUIRE(p.size() == 3);
+	REQUIRE(p.capacity() == 3);
+	for (unsigned int i = 0; i < p.size(); i++)
 	{
-		REQUIRE(v[i] >= 1 && v[i] <= 10);
+		REQUIRE(p[i] >= 1);
+		REQUIRE(p[i] <= 10);
 	}
 }
 SCENARIO("copying vector", "[init]") {
@@ -34,7 +35,8 @@ SCENARIO("push_back", "[p_b]")
 	REQUIRE(x.capacity() == 8);
 	for (unsigned int i = 0; i < x.size(); i++)
 	{
-		REQUIRE(v[i] >= 1 && v[i] <= 10);
+		REQUIRE(x[i] >= 1);
+		REQUIRE(x[i] <= 10);
 	}
 }
 
@@ -42,10 +44,10 @@ SCENARIO("op=", "[assignment]")
 {
 	vector_t y(3);
 	vector_t z;
-	REQUIRE(x.size() == 3);
-	REQUIRE(x.capacity() == 3);
-	for (unsigned int i = 0; i < v.size(); i++)
+	REQUIRE(z.size() == 3);
+	REQUIRE(z.capacity() == 3);
+	for (unsigned int i = 0; i < y.size(); i++)
 	{
-		REQUIRE(v[i] == z[i]);
+		REQUIRE(y[i] == z[i]);
 	}
 }
