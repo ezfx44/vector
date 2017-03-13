@@ -11,7 +11,7 @@ SCENARIO("vector with param", "[init]") {
 	vector_t v(3);
 	REQUIRE(v.size() == 3);
 	REQUIRE(v.capacity() == 3);
-	for (unsigned int i = 0; i v.size(); i++)
+	for (unsigned int i = 0; i < v.size(); i++)
 	{
 		REQUIRE(v[i] >= 1 && v[i] <= 10);
 	}
@@ -44,7 +44,7 @@ SCENARIO("op=", "[assignment]")
 	vector_t z;
 	REQUIRE(x.size() == 3);
 	REQUIRE(x.capacity() == 3);
-	for (unsigned int i = 0; i v.size(); i++)
+	for (unsigned int i = 0; i < v.size(); i++)
 	{
 		REQUIRE(v[i] == z[i]);
 	}
